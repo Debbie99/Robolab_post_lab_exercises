@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<robot name="rob_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find rob_arm_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find rob_arm_description)/urdf/rob_arm.trans" />
+<xacro:include filename="$(find rob_arm_description)/urdf/rob_arm.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.002579043465905267 0.05658440977320845 0.02860062856169175"/>
+    <mass value="49.22540816473109"/>
+    <inertia ixx="0.324812" ixy="-0.007234" ixz="0.000186" iyy="0.326644" iyz="-0.000212" izz="0.589198"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rob_arm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rob_arm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rarm_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.004098206763281077 -0.06029104872534399 0.06611429078598172"/>
+    <mass value="19.158926114295692"/>
+    <inertia ixx="0.199181" ixy="0.005036" ixz="-0.00458" iyy="0.100013" iyz="0.075905" izz="0.135542"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.001157 -0.054971 -0.097553"/>
+    <geometry>
+      <mesh filename="package://rob_arm_description/meshes/rarm_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.001157 -0.054971 -0.097553"/>
+    <geometry>
+      <mesh filename="package://rob_arm_description/meshes/rarm_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rarm_3__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03655819265436887 0.11665899076053965 0.0906188282069729"/>
+    <mass value="7.705819554287586"/>
+    <inertia ixx="0.146736" ixy="-0.000183" ixz="-2.4e-05" iyy="0.061245" iyz="-0.068857" izz="0.087799"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.001157 0.095029 -0.237553"/>
+    <geometry>
+      <mesh filename="package://rob_arm_description/meshes/rarm_3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.001157 0.095029 -0.237553"/>
+    <geometry>
+      <mesh filename="package://rob_arm_description/meshes/rarm_3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rarm_4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03307778405701662 -0.04290400078851586 0.03889151042177713"/>
+    <mass value="11.53837825152501"/>
+    <inertia ixx="0.066971" ixy="0.001547" ixz="-0.001632" iyy="0.015991" iyz="0.003029" izz="0.064473"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.001157 -0.173086 -0.462528"/>
+    <geometry>
+      <mesh filename="package://rob_arm_description/meshes/rarm_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.001157 -0.173086 -0.462528"/>
+    <geometry>
+      <mesh filename="package://rob_arm_description/meshes/rarm_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rarm_5_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.2922389877888527e-07 -0.07663807527150272 4.958168127178197e-07"/>
+    <mass value="3.1547399587029537"/>
+    <inertia ixx="0.00679" ixy="0.0" ixz="-0.0" iyy="0.001465" iyz="0.0" izz="0.00679"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.035043 0.051914 -0.507528"/>
+    <geometry>
+      <mesh filename="package://rob_arm_description/meshes/rarm_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.035043 0.051914 -0.507528"/>
+    <geometry>
+      <mesh filename="package://rob_arm_description/meshes/rarm_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev1" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.001157 0.054971 0.097553"/>
+  <parent link="base_link"/>
+  <child link="rarm_2_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="Rev2" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 -0.15 0.14"/>
+  <parent link="rarm_2_1"/>
+  <child link="rarm_3__1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit effort="100" lower="-3.665191" upper="0.785398" velocity="100"/>
+</joint>
+
+<joint name="Rev3" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 0.268115 0.224975"/>
+  <parent link="rarm_3__1"/>
+  <child link="rarm_4_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit effort="100" lower="-4.363323" upper="0.523599" velocity="100"/>
+</joint>
+
+<joint name="Rigid4" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0362 -0.225 0.045"/>
+  <parent link="rarm_4_1"/>
+  <child link="rarm_5_1"/>
+</joint>
+<gazebo>
+        <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+            <jointName>Rev1,Rev2,Rev3</jointName>
+        </plugin>
+    </gazebo>
+
+</robot>

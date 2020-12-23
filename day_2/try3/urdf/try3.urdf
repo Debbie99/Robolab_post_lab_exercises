@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="try3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0945324585097357 -0.00220309309244843 0.00937597470852675"
+        rpy="0 0 0" />
+      <mass
+        value="0.718252159308914" />
+      <inertia
+        ixx="0.00358656893202139"
+        ixy="-1.78110048615162E-05"
+        ixz="2.55027522469089E-05"
+        iyy="0.0116064949522666"
+        iyz="2.31607184693607E-05"
+        izz="0.0138736189499447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://try3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://try3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rl">
+    <inertial>
+      <origin
+        xyz="4.97555112111137E-08 0.0305177238286873 2.61930782619046E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.202335424276502" />
+      <inertia
+        ixx="5.65468093482746E-05"
+        ixy="-4.01298029738633E-12"
+        ixz="-4.06258959961244E-12"
+        iyy="6.77001605202026E-05"
+        iyz="7.57854402863261E-11"
+        izz="5.65468857678479E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://try3/meshes/rl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://try3/meshes/rl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl"
+    type="continuous">
+    <origin
+      xyz="0.054732 0.1316 -0.053332"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rl" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="ll">
+    <inertial>
+      <origin
+        xyz="4.97648228181546E-08 0.0305177238271352 2.61787375110956E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.20233542424296" />
+      <inertia
+        ixx="5.65468093378152E-05"
+        ixy="-4.01027565404916E-12"
+        ixz="-4.06369834612851E-12"
+        iyy="6.7700160463655E-05"
+        iyz="7.57850665273654E-11"
+        izz="5.65468857215737E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://try3/meshes/ll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://try3/meshes/ll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ll"
+    type="continuous">
+    <origin
+      xyz="0.052204 -0.1316 -0.052829"
+      rpy="-3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ll" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="cbl">
+    <inertial>
+      <origin
+        xyz="-0.00854194798593453 -0.0134353290458102 1.2806164462198E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0116154131903353" />
+      <inertia
+        ixx="6.27246853536761E-06"
+        ixy="-2.13035605643917E-06"
+        ixz="7.45236394880864E-13"
+        iyy="4.3694982512207E-06"
+        iyz="4.57377593698953E-13"
+        izz="6.09747163123682E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://try3/meshes/cbl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://try3/meshes/cbl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cbl"
+    type="continuous">
+    <origin
+      xyz="-0.37163 -0.0034199 0"
+      rpy="1.5708 0 -3.0871" />
+    <parent
+      link="base_link" />
+    <child
+      link="cbl" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="cw">
+    <inertial>
+      <origin
+        xyz="-4.96626860828388E-05 -1.83075776760688E-11 0.00101538174966936"
+        rpy="0 0 0" />
+      <mass
+        value="0.0842836792485099" />
+      <inertia
+        ixx="5.33344905088022E-05"
+        ixy="-3.57561391039521E-14"
+        ixz="-2.26120934236339E-08"
+        iyy="5.34086607388328E-05"
+        iyz="-3.15253245994439E-15"
+        izz="0.000100470561688802" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://try3/meshes/cw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.909803921568627 0.588235294117647 0.0313725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://try3/meshes/cw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cw"
+    type="continuous">
+    <origin
+      xyz="-0.0291 -0.049732 0"
+      rpy="0 0 -3.0941" />
+    <parent
+      link="cbl" />
+    <child
+      link="cw" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+<gazebo>
+    <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>20</updateRate>
+      <leftJoint>rl</leftJoint>
+      <rightJoint>ll</rightJoint>
+      <wheelSeparation>0.4</wheelSeparation>
+      <wheelDiameter>0.2</wheelDiameter>
+      <torque>0.1</torque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>oodm</odometryFrame>
+      <robotBaseFrame>base_link</robotBaseFrame>
+    </plugin>
+  </gazebo>
+</robot>
